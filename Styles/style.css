@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --color-primario:#000000;
+    --color-secundario: #f6f6f6;
+    --color-terceario: #22d4fd;
+
+    --color-quintario: #1B8098;
+
+    --fuente-montserrat: "Montserrat", sans-serif;
+    --fuente-krona: "Krona One", sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    color: var(--color-quintario);
+}
+
+body {
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    box-sizing: border-box;
+}
+
+.header {
+    padding: 2% 0% 0% 15%; /* arriba derecha abajo izquierda*/
+}
+
+.header_menu {
+    display: flex;
+    gap: 80px;
+
+}
+
+.header_menu_link {
+    font-family: var(--fuente-montserrat);    /*diseño de texto*/
+    font-size: 1.5rem;  /* 1REM 16px*/
+    font-weight: 600;
+    color: var(--color-terceario);
+    text-decoration: none; /*sin decoracion*/
+
+}
+
+
+.presentacion {
+    display: flex;
+    /*pertenece a flex -> flexbox*/
+    align-items: center;
+    justify-content: space-between;
+        
+    /*margin: 5%;*/
+    padding: 7% 15%;
+
+    gap: 82px;
+}
+
+.presentacion_contenido {
+    width: 50%;
+    display: flex;
+    flex-direction: column; /*colocar en columna la seccion*/
+    gap: 40px; /*separacion en secciones filas o columanas*/
+}
+
+.presentacion_contenido_titulo {
+    font-family: var(--fuente-krona);
+    font-size: 2.25rem;
+}
+
+.titulo-destaque {
+    color: bisque;
+}
+.presentacion_contenido_parrafo {
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+}
+
+.presentacion_contenido_parrafo a{
+    text-decoration: none;
+    color:var(--color-terceario);
+}
+
+.presentacion_hipervinculos {
+    display: flex;
+    justify-content: space-between; /*separar texto   */   
+    flex-direction: column;
+    align-items: center;    /*items en el centro*/
+    gap: 32px;
+}
+
+.presentacion_hipervinculos_subtitulo{
+    font-family: var(--fuente-krona);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.presentacion_hipervinculos_link {
+    width: 50%;
+    text-align: center;
+
+    /* 
+    Dar un tamaño a la div y establecer los márgenes izquierdo y derecho en auto:
+
+    .container { 
+    width: 700px; 
+    margin-left: auto;
+    margin-right: auto; 
+    }
+
+    se ajusta a la pantalla y no en el centro siempre como el
+    
+    .container { text-align: center; }
+
+    */
+        
+    padding: 21.5px 0; /*ajuste interno, '' vertical ''horizontal*/
+
+    border-radius: 8px; /*curva del recuadro*/
+    
+    font-family: var(--fuente-montserrat);    /*diseño de texto*/
+    
+    font-size: 1.5rem; /*tamaño del texto*/
+
+    font-weight: 600px;
+
+    text-decoration: none; /*sin decoracion*/
+
+    color: var(--color-secundario); /*color del texto*/
+
+    border: 2px solid var(--color-terceario); /*borde del cuadro tamaño diseño color*/
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+}
+
+.presentacion_hipervinculos_link:hover{
+    background-color: #272727;  /*color a la seleccion*/
+    border: 2px solid var(--color-quintario);  /*borde a la seleccion*/
+}
+
+.presentacion_imagen {
+    width: 50%;
+
+}
+
+.footer{
+    background-color:var(--color-terceario);
+    padding: 24px;
+    color: var(--color-primario);
+    text-align: center;
+    font-family: var(--fuente-montserrat);    /*diseño de texto*/
+    font-size: 1.5rem;
+    font-weight: 400;
+
+}
+
+@media (max-width: 1200px ){
+
+    .header {
+        padding: 10%;
+    }
+
+    .header_menu {
+        justify-content: center;
+    }
+    
+    .presentacion {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .presentacion_contenido {
+        width: auto; /*o 100%*/
+    }
+}
