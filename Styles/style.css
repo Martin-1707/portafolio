@@ -160,6 +160,19 @@ body {
 
 }
 
+.decorada {
+    border: 2px solid var(--color-terceario);
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.decorada:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+
 @media (max-width: 1200px ){
 
     .header {
